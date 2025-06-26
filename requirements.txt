@@ -1,0 +1,10 @@
+# PDF generation and image processing dependencies
+reportlab>=4.0.0
+Pillow>=10.0.0
+
+# Development and code quality tools
+black>=23.0.0
+isort>=5.12.0
+flake8>=6.0.0
+mypy>=1.5.0
+pytest>=7.4.0 

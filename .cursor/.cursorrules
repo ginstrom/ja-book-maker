@@ -1,0 +1,121 @@
+# Python Development Rules for Cursor IDE
+
+## Code Style & Formatting
+- Follow PEP 8 style guidelines strictly
+- Use black for code formatting with line length of 88 characters
+- Use isort for import sorting
+- Use type hints for all function parameters and return values
+- Prefer f-strings over .format() or % formatting
+- Use descriptive variable and function names in snake_case
+- Use ALL_CAPS for constants
+- Use CamelCase only for class names
+
+## Import Organization
+- Group imports in this order: standard library, third-party, local imports
+- Use absolute imports when possible
+- Avoid wildcard imports (from module import *)
+- Put imports at the top of the file, after module docstrings
+
+## Documentation & Comments
+- Write docstrings for all modules, classes, and functions
+- Use Google-style or NumPy-style docstrings consistently
+- Include type information in docstrings when helpful
+- Write clear, concise comments for complex logic
+- Keep comments up-to-date with code changes
+
+## Error Handling & Validation
+- Use specific exception types rather than bare except clauses
+- Implement proper error handling with try/except blocks
+- Use logging instead of print statements for debugging
+- Validate function inputs when appropriate
+- Raise informative exceptions with clear error messages
+
+## Code Structure & Design
+- Follow SOLID principles
+- Use composition over inheritance when possible
+- Keep functions small and focused (single responsibility)
+- Avoid deep nesting (max 3-4 levels)
+- Use context managers (with statements) for resource management
+- Prefer list/dict comprehensions over loops when readable
+
+## Testing Best Practices
+- Write unit tests for all functions and classes
+- Use pytest as the testing framework
+- Follow arrange-act-assert pattern in tests
+- Use descriptive test names that explain what is being tested
+- Mock external dependencies in tests
+- Aim for high test coverage but focus on meaningful tests
+
+## Performance & Memory
+- Use generators for large datasets
+- Prefer built-in functions and data structures
+- Use enumerate() instead of range(len())
+- Use zip() for parallel iteration
+- Be mindful of memory usage with large files/datasets
+- Profile code when performance is critical
+
+## Security Considerations
+- Never hardcode passwords, API keys, or sensitive data
+- Use environment variables for configuration
+- Validate and sanitize user inputs
+- Use secure random number generation when needed
+- Be careful with eval() and exec() - avoid if possible
+
+## Dependencies & Environment
+- Pin dependency versions in requirements.txt
+- Use virtual environments for all projects
+- Keep dependencies minimal and well-maintained
+- Document any special setup requirements
+- Use .env files for environment-specific configuration
+
+## Git & Version Control
+- Write clear, descriptive commit messages
+- Keep commits atomic and focused
+- Use .gitignore to exclude unnecessary files
+- Don't commit secrets or sensitive information
+- Use meaningful branch names
+
+## File Organization
+- Organize code into logical modules and packages
+- Use __init__.py files appropriately
+- Keep related functionality together
+- Separate configuration from business logic
+- Use clear directory structure
+
+## Async Programming (when applicable)
+- Use async/await for I/O-bound operations
+- Understand the difference between concurrency and parallelism
+- Use asyncio.gather() for concurrent operations
+- Handle exceptions properly in async code
+- Don't mix sync and async code unnecessarily
+
+## Data Handling
+- Use pandas for data manipulation when appropriate
+- Validate data integrity and types
+- Handle missing or malformed data gracefully
+- Use appropriate data structures for the task
+- Consider memory usage with large datasets
+
+## Logging & Monitoring
+- Use the logging module instead of print statements
+- Set appropriate log levels (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+- Include relevant context in log messages
+- Configure logging appropriately for production
+- Use structured logging when beneficial
+
+## Code Review & Quality
+- Run linters (pylint, flake8) regularly
+- Use type checkers (mypy) when possible
+- Review code for readability and maintainability
+- Look for potential bugs and edge cases
+- Ensure proper test coverage
+
+## Python-Specific Best Practices
+- Use pathlib for file path operations
+- Prefer datetime over time module for date handling
+- Use collections.defaultdict and collections.Counter when appropriate
+- Understand and use Python's data model (__str__, __repr__, etc.)
+- Use property decorators for getters/setters
+- Understand scope and namespace rules
+- Use functools.lru_cache for expensive computations
+- Know when to use classmethod vs staticmethod vs instance method 
